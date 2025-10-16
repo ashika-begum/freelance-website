@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashika Freelance Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('freelance.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffc107;
+    }
+
+    /*.contact-email {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 12px;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 5px 10px;
+      border-radius: 4px;
+      color: #333;
+    }
+    .contact-email {
+      text-align: right;
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.85);
+      color: #000;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }*/
+
+    section {
+      max-width: 900px;
+      margin: 100px auto;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 40px;
+      color: #fff;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: hwb(136 3% 0% / 0.248);
+      margin-top: 15px;
+      font-size: 1.3rem;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 16px;
+      background: #07acff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      color: #333;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #e0a800;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      margin-top: 40px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      section {
+        margin: 50px 20px;
+        padding: 25px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      /*.contact-email {
+        font-size: 10px;
+        top: 5px;
+        right: 10px;
+      }*/
+    }
+    .footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 20px;
+  background-color: #000;
+  color: #fff;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  margin: 10px 20px;
+}
+
+.footer-column h4 {
+  color: #ffc107;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a,
+.footer-column a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover,
+.footer-column a:hover {
+  color: #ffc107;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px 10px;
+  background-color: #111;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 70px; /* Adjust based on your logo size */
+  width: auto;
+}
+.contact-email {
+      text-align: right;
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.85);
+      color: #000;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <header>
+  <div class="nav-container">
+    <div class="logo">
+      <img src="ed.png" alt="Ashika Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  
+  </div>
+</header>
+
+
+  <section id="home">
+    <h1>Welcome to Ashika  Freelance Services</h1>
+    <p>Your one-stop solution for web development, graphic design, and writing services.</p>
+    <p>Welcome to my Freelance Services, where creativity meets functionality. As a passionate and experienced freelancer, I specialize in providing top-notch services in Web Development, Graphic Design, and Content Writing. My mission is to help businesses like yours thrive in the digital world by delivering solutions that are not only visually stunning but also highly effective and user-friendly.</p>
+    <p>I am specialized in the following areas:</p>
+    <h2>Web Development</h2>
+    <h2>Graphic Design</h2>
+    <h2>Blog Content Creation</h2>
+
+    <button onclick="window.location.href='contact.html'">Get In Touch</button>
+  </section>
+
+ 
+
+  <footer>
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>About</h4>
+      <p>Delivering top-notch freelance solutions in web development, design, and content. Let's work together to grow your brand.</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <p>Email: farhanafreelance@gmail.com</p>
+      <p>Phone: +1 (555) 123-4567</p>
+      <p>Location: San Francisco, CA</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Follow</h4>
+      <a href="#">LinkedIn</a><br />
+      <a href="#">Instagram</a><br />
+      <a href="#">Twitter</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2024 Ashika Freelance Services. All rights reserved.
+  </div>
+</footer>
+  
+</body>
+</html>

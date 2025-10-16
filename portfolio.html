@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | Farhana Freelance Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-color: #000;
+      --text-color: white;
+      --highlight-color: #ffcc00;
+      --card-bg: rgba(0, 0, 0, 0.7);
+    }
+
+    body.light {
+      --bg-color: #fff;
+      --text-color: #111;
+      --highlight-color: #0077ff;
+      --card-bg: rgba(255, 255, 255, 0.9);
+    }
+
+    body /*{
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+      transition: background 0.3s, color 0.3s;
+    }*/
+    {
+      background: url('freelance.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #ffffff;
+      transition: background 0.3s ease;
+    }
+
+    nav {
+      background-color: var(--card-bg);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      flex-wrap: wrap;
+      backdrop-filter: blur(5px);
+    }
+
+    .logo img {
+      height: 70px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: var(--highlight-color);
+    }
+
+    .theme-toggle {
+      cursor: pointer;
+      font-size: 1.2rem;
+      background: none;
+      border: none;
+      color: var(--highlight-color);
+    }
+
+    .portfolio-header {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+
+    .portfolio-header h1 {
+      font-size: 2.5rem;
+      color: var(--highlight-color);
+    }
+
+    .portfolio-header p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 10px auto;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .project-card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .project-card-content {
+      padding: 20px;
+    }
+
+    .project-card-content h3 {
+      color: var(--highlight-color);
+      margin-top: 0;
+    }
+
+    .project-card-content p {
+      font-size: 0.95rem;
+    }
+
+    .project-tech {
+      font-size: 0.85rem;
+      margin-top: 10px;
+      font-style: italic;
+      color: gray;
+    }
+
+    footer {
+      background-color: var(--card-bg);
+      padding: 40px 20px;
+      margin-top: 50px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+      gap: 30px;
+    }
+
+    .footer-column {
+      flex: 1 1 250px;
+    }
+
+    .footer-column h4 {
+      color: var(--highlight-color);
+      margin-bottom: 15px;
+    }
+
+    .footer-column a {
+      text-decoration: none;
+      color: var(--text-color);
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .footer-column a:hover {
+      color: var(--highlight-color);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #444;
+      margin-top: 30px;
+      padding-top: 20px;
+      font-size: 0.85rem;
+      color: gray;
+    }
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--highlight-color);
+      color: black;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .portfolio-header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo"><img src="ed.png" alt="Logo"></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+   
+  </nav>
+
+  <header class="portfolio-header" data-aos="fade-down">
+    <h1>My Work Portfolio</h1>
+    <p>Browse through some of the creative, functional, and client-focused projects I've worked on as a freelance developer and designer.</p>
+  </header>
+
+  <section class="portfolio-grid">
+    <div class="project-card" data-aos="fade-up">
+      <img src="project1.jpg" alt="Delight Coffee Shop">
+      <div class="project-card-content">
+        <h3>Delight Coffee Shop Website</h3>
+        <p>Responsive and SEO-optimized online presence with ordering system.</p>
+        <div class="project-tech">Tech: HTML, CSS, JS, Firebase</div>
+      </div>
+    </div>
+
+    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+      <img src="project2.jpg" alt="Otto Shirts Design">
+      <div class="project-card-content">
+        <h3>Otto Shirts Branding</h3>
+        <p>Logo, brand identity & visual campaign for modern menswear startup.</p>
+        <div class="project-tech">Tech: Illustrator, Photoshop, Canva</div>
+      </div>
+    </div>
+
+    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+      <img src="project3.png" alt="Afreen Blogs">
+      <div class="project-card-content">
+        <h3>Afreen Travel Blogs</h3>
+        <p>SEO-rich blog content with storytelling to increase reach and engagement.</p>
+        <div class="project-tech">Tech: WordPress, Yoast SEO, Grammarly</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>About</h4>
+        <p>Delivering top-notch freelance solutions in web development, design, and content. Let's work together to grow your brand.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p>Email: farhanafreelance@gmail.com</p>
+        <p>Phone: +1 (555) 123-4567</p>
+        <p>Location: San Francisco, CA</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Follow</h4>
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2024 Ashika Freelance Services. All rights reserved.
+    </div>
+  </footer>
+
+  <button onclick="scrollToTop()" id="scrollTopBtn">↑</button>
+
+  <script>
+    
+
+    // Scroll to Top Button
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = () => {
+      scrollBtn.style.display = window.scrollY > 200 ? "block" : "none";
+    };
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // AOS Init
+    AOS.init({ duration: 1000, once: true });
+  </script>
+
+</body>
+</html>
